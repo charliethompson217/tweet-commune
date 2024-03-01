@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tweetcommune-dev-114121-authRole",
+      "UnauthRoleArn": "arn:aws:iam::245802128258:role/amplify-tweetcommune-dev-114121-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::245802128258:role/amplify-tweetcommune-dev-114121-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-tweetcommune-dev-114121-deployment",
+      "UnauthRoleName": "amplify-tweetcommune-dev-114121-unauthRole",
+      "StackName": "amplify-tweetcommune-dev-114121",
+      "StackId": "arn:aws:cloudformation:us-east-2:245802128258:stack/amplify-tweetcommune-dev-114121/356c7330-d658-11ee-ab21-065f6910090b",
+      "AmplifyAppId": "d3vidbvo911g5n"
+    },
+    "categories": {
+      "function": {
+        "twitterLambda": {
+          "secretsPathAmplifyAppId": "d3vidbvo911g5n",
+          "deploymentBucketName": "amplify-tweetcommune-dev-114121-deployment",
+          "s3Key": "amplify-builds/twitterLambda-534349757278584d7262-build.zip"
+        }
+      },
+      "api": {
+        "twitterAPI": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3vidbvo911g5n",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
