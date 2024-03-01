@@ -91,9 +91,11 @@ def handler(event, context):
 
             if tweetID == 'text':
                 try:
-                    if not is_content_allowed(tweet):
-                        raise ValueError("Tweet contains forbidden content.")
                     print(tweet)
+                    if not is_content_allowed(tweet):
+                        print("Tweet contains forbidden content.")
+                        raise ValueError("Tweet contains forbidden content.")
+                    
                     response = client_V2.create_tweet(text = tweet)
                     return {
                         'statusCode': 200,
@@ -142,7 +144,9 @@ def handler(event, context):
                 content_type = event['queryStringParameters']['contentType']
                 
                 try:
+                    print(tweet)
                     if not is_content_allowed(tweet):
+                        print("Tweet contains forbidden content.")
                         raise ValueError("Tweet contains forbidden content.")
 
                     presigned_url = s3.generate_presigned_url('put_object', Params={'Bucket': bucket_name, 'Key': object_name, 'ContentType': content_type, 'Metadata': {'tweet-text': tweet}}, ExpiresIn=3600)
